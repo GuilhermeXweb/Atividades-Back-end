@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #result{
+    color: red;
+    font-size: 20px;
+    font-weight: 900;
+    }
+    </style>
+</head>
+<body>
+    <input type="number" id="v1">
+    <input type="number" id="v2">
+     <select name="" id="op">
+        <option value="+">SOMA</option>
+        <option value="-">SUBTRAÇÃO</option>
+        <option value="*">MULTIPLICAÇÃO</option>
+        <option value="div">DIVISÃO</option>
+     </select>
+    <button onclick="calc()">CALCULAR</button>
+    <p id="result"></p>
+    <script>
+      function calc() {  
+        let op = document.getElementById("op").value;
+        let valorinput = Number(document.getElementById("v1").value);
+        let valorinput2 = Number(document.getElementById("v2").value);
+        switch (op) {
+        case "+":
+          resultado = valorinput + valorinput2;
+        break;
+
+        case "-": 
+         resultado = valorinput - valorinput2;
+        break;
+
+        case "*":
+         resultado = valorinput * valorinput2;
+        break;
+
+        case "div": 
+         resultado = valorinput / valorinput2;
+        break; 
+        }
+        document.getElementById("result").innerText = resultado;
+        }
+
+    </script>
+    
+</body>
+</html>
